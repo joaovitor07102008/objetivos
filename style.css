@@ -7,6 +7,10 @@
     --botao-ativo: #1cdac0;
     --botao-inativo: rgb(36, 24, 197);
     --texto-fundo: rgba(89, 142, 240, 0.952);
+
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #FFFF00;
+    --alto-contraste-link: #00FFFF;
 }
 
 body {
@@ -119,7 +123,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin: 20px auto;
-    border: 2px solid #fff;
+    border: 2px solid #14cc42;
     position: relative;
 }
 
@@ -144,4 +148,74 @@ body {
     .botao:last-child {
         border-radius: 0 40px 0 0;
     }
+
+    .formulario button {
+        background-color: #CB6D43;
+        border: none;
+        font-weight: bold;
+    }
+
+    .form-control {
+        background-color: #F1EDEF;
+    }
+}
+
+
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    background-color: #007bff; /* azul */
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.apresenta-lista {
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+#botao-acessibilidade {
+    background-color: #007bff; /* azul */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
 }
